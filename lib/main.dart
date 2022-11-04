@@ -44,12 +44,31 @@ class _Home extends State<Home>{
         color: Colors.black,
         child: new Center(
           child : new Container(
-            width : MediaQuery.of(context).size.height / 2,
-            height: MediaQuery.of(context).size.height /2,
-            color: Colors.greenAccent,
-            child: new Image.network('https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg',
-            fit: BoxFit.cover,),
+            width : MediaQuery.of(context).size.height,
+            height: MediaQuery.of(context).size.height,
+            color: Colors.blue,
+            child: new Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                new Text("Mon oiseau de compagne",
+                style: new TextStyle(
+                  color: Colors.white,
+                  fontSize: 23.0,
+                  fontWeight: FontWeight.w800,
 
+                ),),
+                new Card(
+                  child: new Image.network('https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg',
+                    fit: BoxFit.contain,),
+                ),
+                new Text("Si tu en as besoin dit le moi, j'en ai d'autres",
+                style: new TextStyle(
+                  color: Colors.lightGreenAccent,
+                  fontStyle: FontStyle.italic,
+                  fontSize: 19.0,
+                ),)
+              ],
+            ),
           ),
         ),
       )
